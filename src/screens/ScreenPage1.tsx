@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import PageHeader from '../../components/page/header';
 
 const ScreenPage1 = () => {
     return(
         <SafeAreaView style={styles.screenPage1}>
+            <StatusBar barStyle="light-content"/>
             <PageHeader/>
         </SafeAreaView>
     )
