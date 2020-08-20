@@ -1,12 +1,11 @@
 import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import PageHeader from '../../components/page/header';
 
 const ScreenPage1 = () => {
     return(
         <SafeAreaView style={styles.screenPage1}>
-            <Text style={styles.text}>
-                Screen Page 1
-            </Text>
+            <PageHeader/>
         </SafeAreaView>
     )
 }
@@ -16,9 +15,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#000',
     },
-    text: {
-        color: '#fff',
-    }
 })
 
 export default ScreenPage1;
