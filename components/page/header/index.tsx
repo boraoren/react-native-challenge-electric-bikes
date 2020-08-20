@@ -1,12 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import PageHeaderMenu from './menu';
 
 const PageHeader = () =>{
     return(
-        <View>
-            <Text style={styles.text}>
-                Page Header
-            </Text>
+        <View style={styles.pageHeader}>
+            <PageHeaderMenu/>
         </View>
     )
 }
@@ -14,10 +13,8 @@ const PageHeader = () =>{
 const styles = StyleSheet.create({
     pageHeader: {
         flexDirection: 'row',
+        marginLeft: 35,
     },
-    text: {
-        color: '#fff',
-    }
 })
 
 export default PageHeader;
