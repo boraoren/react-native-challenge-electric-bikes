@@ -1,12 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import ProductHeader from './header';
 
 const Product = () => {
     return(
         <View>
-            <Text style={styles.text}>
-                Product
-            </Text>
+            <ProductHeader/>
         </View>
     )
 }
