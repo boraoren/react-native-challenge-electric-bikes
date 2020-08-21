@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, FlatList, Text, StyleSheet } from 'react-native';
+import ProductItemSpecificationsItem from './item';
 
 const ProductItemSpecifications = () => {
 
@@ -9,7 +10,7 @@ const ProductItemSpecifications = () => {
     ]
 
     const view = ({item}: {item:any}) => {
-        return <Text style={styles.text}>item.id</Text>
+        return <ProductItemSpecificationsItem item={item}/>
     }
 
     return(
