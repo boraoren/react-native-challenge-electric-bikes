@@ -7,7 +7,7 @@ import ProductItemSpecifications from './specifications';
 
 const ProductItem = () =>{
     return (
-        <View>
+        <View style={styles.productItem}>
             <ProductItemHeader/>
             <ProductItemCallToAction/>
             <ProductItemImage/>
@@ -17,8 +17,11 @@ const ProductItem = () =>{
 }
 
 const styles = StyleSheet.create({
-    text: {
-        color: '#FFF',
+    productItem: {
+        backgroundColor: '#F3F3F3',
+        borderTopLeftRadius: 40,
+        borderTopRightRadius: 40,
+        marginTop: 30,
     }
 })
 
