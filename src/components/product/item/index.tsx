@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import ProductItemHeader from './header';
 import ProductItemCallToAction from './calltoaction';
 import ProductItemImage from './image';
+import ProductItemSpecifications from './specifications';
 
 const ProductItem = () =>{
     return (
@@ -10,6 +11,7 @@ const ProductItem = () =>{
             <ProductItemHeader/>
             <ProductItemCallToAction/>
             <ProductItemImage/>
+            <ProductItemSpecifications/>
         </View>
     )
 }
