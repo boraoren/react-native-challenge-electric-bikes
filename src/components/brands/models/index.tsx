@@ -1,43 +1,34 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
-
-interface ModelsItemProps{
-    id: string;
-    image: string;
-    name: string;
-    price: string;
-}
-
-const ModelsItem = ({item}:{item:ModelsItemProps}) => {
-    return(
-        <Text>{item.id}</Text>
-    )
-}
+import { View, Text, FlatList, StyleSheet } from 'react-native';
+import ModelsItem from './item';
 
 const BrandsModels = () => {
 
     const data = [
         {
-            id: '1',
-            image: '',
+            id: 'A1',
+            image: require('./modelImage-1.png'),
             name: 'MODEL 340',
-            price: '$5,550'
+            price: '$5,550',
+            order: 1,
         },{
-            id: '2',
-            image: '',
+            id: 'A2',
+            image: require('./modelImage-2.png'),
             name: 'MODEL 450',
-            price: '$5,400'
+            price: '$5,400',
+            order: 2,
         },{
-            id: '3',
-            image: '',
+            id: 'A3',
+            image: require('./modelImage-3.png'),
             name: 'MODEL 120',
-            price: '$4,600'
+            price: '$4,600',
+            order: 3,
         }
         
     ]
 
     return(
-        <View>
+        <View style={styles.brandsModel}>
             <FlatList
             data={data}
             renderItem={ModelsItem}
@@ -46,5 +37,12 @@ const BrandsModels = () => {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    brandsModel: {
+        marginLeft: 36,
+        marginTop: 36,
+    }
+})
 
 export default BrandsModels;
