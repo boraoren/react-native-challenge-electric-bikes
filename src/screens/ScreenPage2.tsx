@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text, SafeAreaView, StatusBar } from 'react-native';
+import PageHeader from '../components/page/header';
 
 const ScreenPage2 = () =>{
     return(
         <SafeAreaView>
             <StatusBar barStyle="dark-content"/>
-            <Text>Screen Page 2</Text>
+            <PageHeader menuDrawerColor={'#000'}/>
         </SafeAreaView>
     )
 }

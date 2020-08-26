@@ -7,7 +7,7 @@ const ScreenPage1 = () => {
     return(
         <SafeAreaView style={styles.screenPage1}>
             <StatusBar barStyle="light-content"/>
-            <PageHeader/>
+            <PageHeader menuDrawerColor={'#F8E029'}/>
             <Product/>
         </SafeAreaView>
     )
