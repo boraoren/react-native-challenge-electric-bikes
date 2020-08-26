@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, StatusBar } from 'react-native';
 import PageHeader from '../components/page/header';
 import ApplicationName from '../components/label/applicationname';
 import Brands from '../components/brands';
+import PageBottomMenu from '../components/page/bottom/menu';
 
 const ScreenPage2 = () =>{
     return(
@@ -11,6 +12,7 @@ const ScreenPage2 = () =>{
             <PageHeader menuDrawerColor={'#000'}/>
             <ApplicationName/>
             <Brands/>
+            <PageBottomMenu/>
         </SafeAreaView>
     )
 }
