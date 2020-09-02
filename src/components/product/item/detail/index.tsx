@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ProductItemSpecifications from '../specifications';
 import { ProductItemSpecificationsItemData, ProductItemSpecificationItemStyle } from '../specifications/item';
+import ProductItemDetailQuestion from './question';
 
 const ProductItemDetail = () => {
 
@@ -21,6 +22,8 @@ const ProductItemDetail = () => {
             <ProductItemSpecifications 
                 itemData={itemData} 
                 style={style}/>
+            <ProductItemDetailQuestion
+                 text={'How to maximize range?'}/>
         </View>
     )
 }
