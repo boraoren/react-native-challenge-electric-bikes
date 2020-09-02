@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import ProductItemSpecifications from '../specifications';
 import { ProductItemSpecificationsItemData, ProductItemSpecificationItemStyle } from '../specifications/item';
 import ProductItemDetailQuestion from './question';
+import ProductItemDetailTitle from './title';
 
 const ProductItemDetail = () => {
 
@@ -22,8 +23,12 @@ const ProductItemDetail = () => {
             <ProductItemSpecifications 
                 itemData={itemData} 
                 style={style}/>
+
             <ProductItemDetailQuestion
                  text={'How to maximize range?'}/>
+
+            <ProductItemDetailTitle
+                text={'STOP. START. WHEEE.'}/>
         </View>
     )
 }
