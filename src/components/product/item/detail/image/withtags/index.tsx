@@ -17,7 +17,8 @@ const ProductItemDetailImageWithTags = () =>{
         <View style={styles.productItemDetailImageWithTags}>
             <Image source={imageMotor}/>
             {tagsData.map((data)=>(
-                <Tag id={data.id}
+                <Tag key={data.id} 
+                    id={data.id}
                     description={data.description}
                     top={data.top}
                     left={data.left}/>
