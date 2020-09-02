@@ -5,6 +5,7 @@ import { ProductItemSpecificationsItemData, ProductItemSpecificationItemStyle } 
 import ProductItemDetailQuestion from './question';
 import ProductItemDetailTitle from './title';
 import ProductItemDetailImageWithTags from './image/withtags';
+import ButtonCallToAction from '../../../button/calltoaction';
 
 const ProductItemDetail = () => {
 
@@ -25,6 +26,7 @@ const ProductItemDetail = () => {
             <ProductItemDetailQuestion text={'How to maximize range?'}/>
             <ProductItemDetailTitle text={'STOP. START. WHEEE.'}/>
             <ProductItemDetailImageWithTags/>
+            <ButtonCallToAction text={'Test ride'}/>
         </View>
     )
 }
