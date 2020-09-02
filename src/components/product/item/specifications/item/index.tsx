@@ -2,30 +2,38 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { textStyle } from '../../../../../common/styles';
 
-interface ProductItemSpecificationsItemProps {
-    id: string;
-    title: string;
-    detail: string;
+export interface ProductItemSpecificationsItemData{
+    id:string;
+    title:string;
+    detail:string;
+}
+
+export interface ProductItemSpecificationItemStyle{
+    titleColor: string;
+    detailColor: string;
+    backgroundColor: string;
 }
 
 const ProductItemSpecificationsItem = ({
-    item
+    item,
+    style,
 }: {
-    item: ProductItemSpecificationsItemProps
+    item: ProductItemSpecificationsItemData;
+    style: ProductItemSpecificationItemStyle;
 }) =>{
     return(
-        <View style={styles.productItemSpecificationsItem}>
+        <View style={styles(style).productItemSpecificationsItem}>
             <View>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.detail}>{item.detail}</Text>
+                <Text style={styles(style).title}>{item.title}</Text>
+                <Text style={styles(style).detail}>{item.detail}</Text>
             </View>
         </View>
     )
 }
 
-const styles = StyleSheet.create({
+const styles = (style?: ProductItemSpecificationItemStyle) => StyleSheet.create({
     productItemSpecificationsItem:{
-        backgroundColor: '#FFF',
+        backgroundColor: style?.backgroundColor,
         width: 154,
         height: 92,
         marginBottom: 25,
@@ -37,12 +45,12 @@ const styles = StyleSheet.create({
     },
     title: {
         ...textStyle,
-        color: '#BDBDC1',
+        color: style?.titleColor,
         fontSize: 15,
     },
     detail: {
         ...textStyle,
-        color: '#000',
+        color: style?.detailColor,
         fontSize: 20,
     }
 })

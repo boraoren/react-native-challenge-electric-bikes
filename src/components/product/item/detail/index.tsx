@@ -1,12 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import ProductItemSpecifications from '../specifications';
+import { ProductItemSpecificationsItemData, ProductItemSpecificationItemStyle } from '../specifications/item';
 
 const ProductItemDetail = () => {
+
+    const itemData:ProductItemSpecificationsItemData[] = [
+        {id: '1', title: 'Top speed', detail: '80 kmph'},
+        {id: '2', title: 'Warranty', detail: '3 Yrs'},
+    ]
+
+    const style: ProductItemSpecificationItemStyle ={
+        titleColor: '#BDBDC1',
+        detailColor: '#FFF',
+        backgroundColor: '#2E2C2C',
+    }
+
     return(
         <View>
-            <Text style={styles.text}>
-                Product Item Detail
-            </Text>
+            <ProductItemSpecifications 
+                itemData={itemData} 
+                style={style}/>
         </View>
     )
 }
