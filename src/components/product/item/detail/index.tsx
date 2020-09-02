@@ -4,6 +4,7 @@ import ProductItemSpecifications from '../specifications';
 import { ProductItemSpecificationsItemData, ProductItemSpecificationItemStyle } from '../specifications/item';
 import ProductItemDetailQuestion from './question';
 import ProductItemDetailTitle from './title';
+import ProductItemDetailImageWithTags from './image/withtags';
 
 const ProductItemDetail = () => {
 
@@ -20,15 +21,10 @@ const ProductItemDetail = () => {
 
     return(
         <View>
-            <ProductItemSpecifications 
-                itemData={itemData} 
-                style={style}/>
-
-            <ProductItemDetailQuestion
-                 text={'How to maximize range?'}/>
-
-            <ProductItemDetailTitle
-                text={'STOP. START. WHEEE.'}/>
+            <ProductItemSpecifications itemData={itemData} style={style}/>
+            <ProductItemDetailQuestion text={'How to maximize range?'}/>
+            <ProductItemDetailTitle text={'STOP. START. WHEEE.'}/>
+            <ProductItemDetailImageWithTags/>
         </View>
     )
 }
